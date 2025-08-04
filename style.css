@@ -1,0 +1,176 @@
+*,
+*::before,
+*::after {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/* Remove default list styles */
+ul,
+ol {
+list-style: none;
+}
+
+/* Normalize link styles and remove active state styles */
+a {
+text-decoration: none;
+color: inherit;
+}
+
+a:active {
+text-decoration: none;
+color: inherit;
+outline: none;
+}
+
+/* Remove default button styles with touch-friendly tap highlight */
+button {
+border: none;
+background: none;
+font: inherit;
+cursor: pointer;
+-webkit-tap-highlight-color: transparent;
+}
+
+/* Normalize images for responsive display */
+img,
+picture,
+video,
+canvas,
+svg {
+display: block;
+max-width: 100%;
+height: auto;
+}
+
+/* Remove default table spacing */
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+
+/* Normalize form elements for mobile consistency */
+input,
+textarea,
+select {
+font: inherit;
+border: none;
+width: 100%;
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+}
+
+/* Remove default fieldset border */
+fieldset {
+border: none;
+}
+
+/* Mobile-first base styles for html and body */
+html {
+font-size: 16px; /* Base font size for mobile */
+scroll-behavior: smooth;
+}
+
+body {
+min-height: 100vh; /* Full viewport height for mobile */
+font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+color: #f5f5f5; /* Off-white for contrast */
+background: linear-gradient(to bottom, #d3d3d3, #808080, #404040); /* Gray gradient */
+line-height: 1.5;
+font-size: 1rem; /* 16px default for mobile */
+padding: 1rem; /* Base padding for mobile */
+}
+
+/* Remove default outlines on focus, add accessible focus styles */
+:focus {
+outline: none;
+}
+
+:focus-visible {
+outline: 2px solid #f5f5f5;
+outline-offset: 2px;
+}
+
+/* Mobile-first styles for container and song lists */
+#container {
+max-width: 100%;
+margin: 0 auto;
+}
+
+#set-1, #set-2 {
+margin-bottom: 2rem;
+}
+
+h2 {
+font-size: 1.5rem; /* 24px on mobile */
+margin-bottom: 1rem;
+font-weight: 600;
+}
+
+ol li {
+margin-bottom: 0.5rem;
+}
+
+ol li a {
+display: block;
+padding: 0.75rem; /* Larger tap target for mobile */
+font-size: 1.1rem; /* Slightly larger for readability */
+border-radius: 0.25rem;
+transition: background-color 0.2s ease;
+}
+
+ol li a:hover,
+ol li a:focus-visible {
+background-color: rgba(255, 255, 255, 0.1); /* Subtle hover effect */
+}
+
+/* Media query for tablets (min-width 768px) */
+@media (min-width: 768px) {
+html {
+    font-size: 18px; /* Larger base font for tablets */
+}
+
+body {
+    padding: 2rem; /* Increased padding */
+}
+
+#container {
+    max-width: 700px; /* Constrain width for readability */
+}
+
+h2 {
+    font-size: 1.75rem; /* 31.5px on tablets */
+}
+
+ol li a {
+    padding: 0.5rem; /* Slightly smaller padding for larger screens */
+    font-size: 1.2rem;
+}
+}
+
+/* Media query for desktops (min-width 1024px) */
+@media (min-width: 1024px) {
+html {
+    font-size: 20px; /* Larger base font for desktops */
+}
+
+body {
+    padding: 3rem; /* More spacious padding */
+}
+
+#container {
+    max-width: 900px; /* Wider container for desktops */
+    display: flex;
+    gap: 2rem; /* Side-by-side layout for sets */
+}
+
+#set-1, #set-2 {
+    flex: 1;
+    margin-bottom: 0; /* Remove bottom margin in flex layout */
+}
+
+h2 {
+    font-size: 2rem; /* 40px on desktops */
+}
